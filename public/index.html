@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <title>Blog App</title>
+</head>
+<body>
+  <div class="container" ng-controller="AppCtrl">
+    <h1>Blogger's Clan</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Blogger's Name</th>         
+          <th>Article Name</th>
+          <th>Article</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="blog.bname"></td>
+          <td><input class="form-control" ng-model="blog.articleno"></td>
+          <td><input class="form-control" ng-model="blog.article"></td>
+          <td><button class="btn btn-primary" ng-click="add()">Add Blog</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="blog in blogapp">
+          <td>{{blog.bname}}</td>
+          <td>{{blog.articleno}}</td>
+          <td>{{blog.article}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(blog._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(blog._id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>

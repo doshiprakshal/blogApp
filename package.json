@@ -1,0 +1,30 @@
+{
+  "name": "blogApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongojs": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aditimewada/blogApp.git"
+  },
+  
+  "cacheDirectories": ["client/node_modules", "server/node_modules"],
+  "cacheDirectories": ["data"],
+  
+  "author": "",
+ 
+  "homepage": "https://github.com/aditimewada/blogApp"
+}
